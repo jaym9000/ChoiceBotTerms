@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChoiceBot Terms of Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #5664d2;
+            --primary-dark: #4553c0;
+            --secondary: #6e48aa;
+            --accent: #ff6b6b;
+            --text: #2d3748;
+            --text-light: #718096;
+            --background: #f7f9fc;
+            --card-bg: #ffffff;
+            --border: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.05);
+            --success: #48bb78;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--background);
+            margin: 0;
+            padding: 0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 20px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+
+        .logo-container {
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            height: 60px;
+            width: 60px;
+            background-color: white;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo i {
+            font-size: 32px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .date-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+            backdrop-filter: blur(4px);
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: -50px auto 80px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .content-card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px var(--shadow);
+            padding: 60px 40px;
+            position: relative;
+        }
+
+        .content-nav {
+            position: sticky;
+            top: 20px;
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            width: 260px;
+            float: right;
+            margin-left: 40px;
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 24px;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 20px var(--shadow);
+            display: none;
+        }
+
+        @media (min-width: 1100px) {
+            .content-nav {
+                display: block;
+            }
+        }
+
+        .nav-title {
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-bottom: 12px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: all 0.2s;
+            display: block;
+            padding: 4px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 50%;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .nav-links a:hover::before {
+            opacity: 1;
+        }
+
+        .heading {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border);
+            scroll-margin-top: 80px;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            border-radius: 50%;
+            margin-right: 12px;
+            font-size: 1rem;
+        }
+
+        .paragraph {
+            margin-bottom: 24px;
+            color: var(--text-light);
+        }
+
+        .bulletPoint {
+            margin-left: 20px;
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 28px;
+            color: var(--text-light);
+        }
+
+        .bulletPoint::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 18px;
+            height: 18px;
+            background-color: var(--primary);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .bulletPoint::after {
+            content: "✓";
+            position: absolute;
+            left: 5px;
+            top: 1px;
+            font-size: 10px;
+            color: var(--primary);
+        }
+
+        .footer {
+            text-align: center;
+            font-style: italic;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(86, 100, 210, 0.1);
+            color: var(--primary);
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 50px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(86, 100, 210, 0.3);
+            cursor: pointer;
+            z-index: 100;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 20px 40px;
+            }
+            .title {
+                font-size: 2.2rem;
+            }
+            .container {
+                margin: -40px 20px 40px;
+            }
+            .content-card {
+                padding: 40px 20px;
+            }
+            .heading {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f0f5ff;
+                --text-light: #a0aec0;
+                --background: #1a202c;
+                --card-bg: #2d3748;
+                --border: #4a5568;
+                --shadow: rgba(0, 0, 0, 0.3);
+            }
+            
+            .logo {
+                background-color: #2d3748;
+            }
+            
+            .content-nav {
+                background: rgba(45, 55, 72, 0.8);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+            </div>
+        </div>
+        <h1 class="title">Terms of Service</h1>
+        <p class="subtitle">These terms govern your use of ChoiceBot. Please read them carefully.</p>
+        <div class="date-badge">Effective Date: <span id="effective-date"></span></div>
+    </div>
+    
+    <div class="container">
+        <div class="content-card">
+            <div class="content-nav">
+                <div class="nav-title"><i class="fas fa-list-ul"></i> Quick Navigation</div>
+                <ul class="nav-links">
+                    <li><a href="#acceptance">Acceptance of Terms</a></li>
+                    <li><a href="#changes">Changes to the Terms</a></li>
+                    <li><a href="#eligibility">Eligibility</a></li>
+                    <li><a href="#license">License to Use</a></li>
+                    <li><a href="#conduct">User Conduct</a></li>
+                    <li><a href="#ip">Intellectual Property</a></li>
+                    <li><a href="#content">User-Generated Content</a></li>
+                    <li><a href="#privacy">Privacy and Data</a></li>
+                    <li><a href="#disclaimers">Disclaimers</a></li>
+                    <li><a href="#liability">Limitation of Liability</a></li>
+                    <li><a href="#indemnification">Indemnification</a></li>
+                    <li><a href="#termination">Termination</a></li>
+                    <li><a href="#subscription">Subscription Terms</a></li>
+                    <li><a href="#law">Governing Law</a></li>
+                    <li><a href="#misc">Miscellaneous</a></li>
+                </ul>
+            </div>
+
+            <div class="badges-container">
+                <span class="badge"><i class="fas fa-shield-alt"></i> Privacy-First</span>
+                <span class="badge"><i class="fas fa-check-circle"></i> GDPR Compliant</span>
+                <span class="badge"><i class="fas fa-lock"></i> Data Security</span>
+            </div>
+
+            <h2 class="heading" id="acceptance"><span class="section-number">1</span>Acceptance of Terms</h2>
+            <p class="paragraph">
+                By downloading, installing, or using the ChoiceBot mobile application ("App"), you ("User") agree to be bound by these Terms of Service ("Terms") and our Privacy Policy. If you do not agree to these Terms, do not use the App.
+            </p>
+
+            <h2 class="heading" id="changes"><span class="section-number">2</span>Changes to the Terms</h2>
+            <p class="paragraph">
+                We reserve the right to update or modify these Terms at any time. Any changes will be effective immediately upon posting an updated version within the App. Your continued use of the App after such changes constitutes your acceptance of the new Terms.
+            </p>
+
+            <h2 class="heading" id="eligibility"><span class="section-number">3</span>Eligibility</h2>
+            <p class="paragraph">
+                You must be at least 13 years old to use this App. By using the App, you represent and warrant that you meet this eligibility requirement.
+            </p>
+
+            <h2 class="heading" id="license"><span class="section-number">4</span>License to Use the App</h2>
+            <p class="paragraph">
+                We grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App solely for your personal, non-commercial use in accordance with these Terms. You agree not to copy, modify, distribute, or reverse-engineer any part of the App.
+            </p>
+
+            <h2 class="heading" id="conduct"><span class="section-number">5</span>User Conduct</h2>
+            <p class="paragraph">
+                You agree to use ChoiceBot only for lawful purposes and in a manner that does not infringe on the rights of others or restrict or inhibit anyone's use of the App. Prohibited conduct includes, but is not limited to:
+            </p>
+            <p class="bulletPoint">Using the App to engage in illegal, fraudulent, or harmful activities.</p>
+            <p class="bulletPoint">Attempting to bypass security measures or interfering with the normal operation of the App.</p>
+            <p class="bulletPoint">Reverse engineering, decompiling, or disassembling the App.</p>
+
+            <h2 class="heading" id="ip"><span class="section-number">6</span>Intellectual Property</h2>
+            <p class="paragraph">
+                All content, design elements, and underlying technology of ChoiceBot—including text, graphics, logos, images, animations, and software—are the exclusive property of ChoiceBot or its licensors and are protected by intellectual property laws. Nothing in these Terms grants you any rights in any of our intellectual property except the limited license granted above.
+            </p>
+
+            <h2 class="heading" id="content"><span class="section-number">7</span>User-Generated Content</h2>
+            <p class="paragraph">
+                ChoiceBot allows you to input decision dilemmas and other content ("User Content"). You retain ownership of your User Content, but by submitting it you grant us a non-exclusive, worldwide, royalty-free license to use, reproduce, modify, and display your content in connection with operating and improving the App.
+            </p>
+
+            <h2 class="heading" id="privacy"><span class="section-number">8</span>Privacy and Data Protection</h2>
+            <p class="paragraph">
+                Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and safeguard your information. By using the App, you consent to our practices as described in the Privacy Policy.
+            </p>
+
+            <h2 class="heading" id="disclaimers"><span class="section-number">9</span>Disclaimers and No Warranty</h2>
+            <p class="paragraph">
+                The App is provided on an "as is" and "as available" basis without any warranties, express or implied. We do not warrant that:
+            </p>
+            <p class="bulletPoint">The App will be uninterrupted, secure, or error-free.</p>
+            <p class="bulletPoint">Any defects will be corrected.</p>
+            <p class="bulletPoint">The App meets your specific requirements or expectations.</p>
+
+            <h2 class="heading" id="liability"><span class="section-number">10</span>Limitation of Liability</h2>
+            <p class="paragraph">
+                In no event shall ChoiceBot be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of or inability to use the App—even if we have been advised of the possibility of such damages. Our total aggregate liability for any claims shall not exceed any fees paid by you (if any) for accessing the App.
+            </p>
+
+            <h2 class="heading" id="indemnification"><span class="section-number">11</span>Indemnification</h2>
+            <p class="paragraph">
+                You agree to indemnify, defend, and hold harmless ChoiceBot, its affiliates, officers, directors, employees, and agents from any claims, damages, obligations, losses, liabilities, costs, or expenses (including reasonable attorneys' fees) arising from your use of the App or your violation of these Terms.
+            </p>
+
+            <h2 class="heading" id="termination"><span class="section-number">12</span>Termination</h2>
+            <p class="paragraph">
+                We may suspend or terminate your access to the App at any time and for any reason, without prior notice, including if you breach these Terms. Upon termination, your right to use the App will immediately cease, and all provisions of these Terms that by their nature should survive termination will remain in effect.
+            </p>
+
+            <h2 class="heading" id="subscription"><span class="section-number">13</span>Subscription Terms</h2>
+            <p class="paragraph">
+                ChoiceBot offers auto-renewable subscription options. The following terms apply to all subscriptions:
+            </p>
+            <p class="bulletPoint">Payment will be charged to your Apple ID account at the confirmation of purchase.</p>
+            <p class="bulletPoint">Your subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current period.</p>
+            <p class="bulletPoint">Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
+            <p class="bulletPoint">You can manage your subscriptions and turn off auto-renewal by going to your Account Settings after purchase.</p>
+            <p class="bulletPoint">Any unused portion of the free trial period, if offered, will be forfeited when you purchase a subscription.</p>
+            <p class="bulletPoint">All purchases are final. No refunds will be issued for partial subscription periods.</p>
+            <p class="bulletPoint">By subscribing, you agree that you understand and accept these subscription terms.</p>
+
+            <h2 class="heading" id="law"><span class="section-number">14</span>Governing Law and Dispute Resolution</h2>
+            <p class="paragraph">
+                These Terms shall be governed by and construed in accordance with the laws of New Brunswick, CA, without regard to its conflict of laws rules. Any disputes arising out of or related to these Terms or the App shall be resolved through binding arbitration in New Brunswick, unless prohibited by applicable law.
+            </p>
+
+            <h2 class="heading" id="misc"><span class="section-number">15</span>Miscellaneous</h2>
+            <p class="paragraph">
+                <strong>Entire Agreement:</strong> These Terms constitute the entire agreement between you and ChoiceBot regarding your use of the App.<br><br>
+                <strong>Severability:</strong> If any provision of these Terms is found to be unenforceable, the remaining provisions will remain in full force and effect.<br><br>
+                <strong>Waiver:</strong> Failure to enforce any provision of these Terms shall not constitute a waiver of future enforcement of that or any other provision.<br><br>
+                <strong>Contact:</strong> If you have any questions regarding these Terms, please contact us at: <a href="mailto:choicebott@gmail.com" style="color: var(--primary); text-decoration: none;">choicebott@gmail.com</a>
+            </p>
+
+            <p class="footer">
+                By using the ChoiceBot App, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+            </p>
+        </div>
+    </div>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Set the current date as the effective date
+        document.getElementById('effective-date').textContent = new Date().toLocaleDateString();
+        
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+        
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
